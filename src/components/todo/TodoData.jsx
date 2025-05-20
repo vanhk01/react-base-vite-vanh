@@ -5,14 +5,10 @@ const TodoData = (props) => {
     }
     return (
         <div className="todo-data">
-            {todoList.map((item) => {
-                return (
-                    <div className="todo-item" key={item.id}>
-                        <div>{item.name}</div>
-                        <button onClick={() => handleOnClick(item.id)}>Delete</button>
-                    </div>
-                )
-            })}
+            {todoList.map((item) => <div className="todo-item" key={item.id}>
+                <div>{item.name}</div>
+                <button onClick={() => (handleOnClick(item.id))}>Delete</button>
+            </div>)}
         </div>
     )
 }
